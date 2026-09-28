@@ -15,7 +15,7 @@ export const get5First = (): Promise<Good[]> => {
   });
 };
 
-export const getRedGoods = (): Promise<Good[]> => {
+export const getRed = (): Promise<Good[]> => {
   return getAll().then(goods => {
     return goods.filter(good => good.color === 'red');
   });
