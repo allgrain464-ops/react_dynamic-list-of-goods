@@ -14,21 +14,27 @@ export class App extends React.Component<{}, State> {
   };
 
   handleLoadAll = () => {
-    getAll().then(goods => {
-      this.setState({ goods });
-    });
+    getAll()
+      .then(goods => {
+        this.setState({ goods });
+      })
+      .catch(() => {});
   };
 
   handleLoad5First = () => {
-    get5First().then(goods => {
-      this.setState({ goods });
-    });
+    get5First()
+      .then(goods => {
+        this.setState({ goods });
+      })
+      .catch(() => {});
   };
 
   handleLoadRed = () => {
-    getRed().then(goods => {
-      this.setState({ goods });
-    });
+    getRed()
+      .then(goods => {
+        this.setState({ goods });
+      })
+      .catch(() => {});
   };
 
   render() {
